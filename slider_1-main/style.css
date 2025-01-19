@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* Importa il font Poppins da Google Fonts */
+
+body{
+    margin: 0; /* Rimuove il margine di default del body */
+    background-color: #000; /* Imposta il colore di sfondo del body su nero */
+    color: #eee; /* Imposta il colore del testo a un grigio chiaro */
+    font-family: "PT Sans", sans-serif; /* Imposta il font del corpo a "PT Sans" */
+    font-size: 20px; /* Imposta la dimensione del testo a 20px */
+}
+
+a{
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+}
+
+header{
+    width: 1140px; /* Imposta la larghezza fissa del header */
+    max-width: 80%; /* Limita la larghezza massima dell'header all'80% */
+    margin: auto; /* Centra orizzontalmente l'header */
+    height: 50px; /* Imposta l'altezza dell'header */
+    display: flex; /* Usa il flexbox per il layout */
+    align-items: center; /* Allinea verticalmente gli elementi al centro */
+    position: relative; /* Posizionamento relativo per gli elementi figli */
+    z-index: 100; /* Imposta lo z-index per garantire che l'header stia sopra gli altri elementi */
+}
+
+header a{
+    color: #eee; /* Imposta il colore del link nell'header a grigio chiaro */
+    margin-right: 40px; /* Distanza di 40px tra i link */
+}
+
+/* carousel */
+.carousel{
+    height: 100vh; /* Imposta l'altezza del carosello a 100% dell'altezza della finestra */
+    margin-top: -50px; /* Sposta il carosello verso l'alto di 50px */
+    width: 100vw; /* Imposta la larghezza del carosello a 100% della larghezza della finestra */
+    overflow: hidden; /* Nasconde qualsiasi contenuto che esce dai limiti del carosello */
+    position: relative; /* Posizionamento relativo per i figli */
+}
+
+.carousel .list .item{
+    width: 100%; /* Imposta la larghezza degli elementi della lista a 100% */
+    height: 100%; /* Imposta l'altezza degli elementi della lista a 100% */
+    position: absolute; /* Posiziona gli elementi in modo assoluto */
+    inset: 0 0 0 0; /* Imposta tutti i margini a zero per centrare l'elemento */
+}
+
+.carousel .list .item img{
+    width: 100%; /* Imposta la larghezza dell'immagine a 100% */
+    height: 100%; /* Imposta l'altezza dell'immagine a 100% */
+    object-fit: cover; /* Adatta l'immagine coprendo l'area senza distorsioni */
+}
+
+.carousel .list .item .content{
+    position: absolute; /* Posiziona il contenuto in modo assoluto */
+    top: 20%; /* Sposta il contenuto verso il 20% della parte superiore dell'elemento */
+    width: 1500px; /* Imposta la larghezza del contenuto a 1140px */
+    max-width: 80%; /* Limita la larghezza massima del contenuto all'80% */
+    left: 50%; /* Centra orizzontalmente il contenuto */
+    transform: translateX(-50%); /* Trasla il contenuto per centrarlo perfettamente */
+
+    box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
+    color: #fff; /* Imposta il colore del testo */
+    text-shadow: 0 5px 5px #150734; /* Aggiunge un'ombra al testo */
+    font-family: "PT Sans", sans-serif; /* Imposta il font per il contenuto */
+    font-weight: bold; /* Imposta il peso del font a bold */
+    font-size: 20px; /* Imposta la dimensione del testo a 20px */
+}
+
+.carousel .list .item .author{
+    font-weight: bold; /* Imposta il font dell'autore a bold */
+    font-family: "PT Sans", sans-serif; /* Imposta il font per il contenuto */
+}
+
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em; /* Imposta la dimensione del font per titolo e argomento */
+    font-weight: bold; /* Imposta il peso del font a bold */
+    line-height: 1.3em; /* Imposta l'altezza della linea a 1.3em per i titoli */
+}
+
+.carousel .list .item .topic{
+    color: red; /* Imposta il colore dell'argomento a un arancione */
+}
+
+.carousel .list .item .buttons{
+    display: grid; /* Usa il grid layout per i pulsanti */
+    grid-template-columns: repeat(2, 130px); /* Definisce due colonne per i pulsanti */
+    grid-template-rows: 50px; /* Imposta l'altezza della riga a 40px */
+    gap: 5px; /* Imposta uno spazio di 5px tra i pulsanti */
+    margin-top: 20px; /* Distanza sopra i pulsanti */
+    padding: 50px 50px;
+}
+
+.carousel .list .item .buttons button{
+    border: none; /* Rimuove il bordo dei pulsanti */
+    background-color: #00c4fe;; /* Imposta lo sfondo del pulsante a grigio chiaro */
+    font-family: "PT Sans", sans-serif; /* Imposta il font per i pulsanti */
+    font-weight: 500; /* Imposta il peso del font a 500 */
+    font-size: 20px;
+    font-weight: bold;
+    border: 2.5px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent; /* Rende il secondo pulsante trasparente */
+    border: 1px solid #fff; /* Aggiunge un bordo bianco al secondo pulsante */
+    color: #eee; /* Imposta il colore del testo del secondo pulsante */
+}
+
+/* thumbnail */
+.thumbnail{
+    position: absolute; /* Posiziona il carosello miniatura in modo assoluto */
+    bottom: 50px; /* Distanza dal basso di 50px */
+    left: 50%; /* Centra orizzontalmente le miniature */
+    width: max-content; /* Imposta la larghezza in base al contenuto */
+    z-index: 100; /* Imposta lo z-index per portare sopra gli altri elementi */
+    display: flex; /* Usa flexbox per il layout */
+    gap: 20px; /* Distanza tra gli elementi */
+}
+
+.thumbnail .item{
+    width: 150px; /* Larghezza della miniatura */
+    height: 220px; /* Altezza della miniatura */
+    flex-shrink: 0; /* Impedisce alle miniature di ridursi */
+    position: relative; /* Posizionamento relativo per gli elementi figli */
+}
+
+.thumbnail .item img{
+    width: 100%; /* Larghezza dell'immagine della miniatura */
+    height: 100%; /* Altezza dell'immagine della miniatura */
+    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+    border-radius: 20px; /* Arrotonda gli angoli delle miniature */
+}
+
+.thumbnail .item .content{
+    color: #fff; /* Imposta il colore del testo delle miniature a bianco */
+    position: absolute; /* Posiziona il contenuto in modo assoluto */
+    bottom: 10px; /* Distanza dal fondo di 10px */
+    left: 10px; /* Distanza dalla sinistra di 10px */
+    right: 10px; /* Distanza dalla destra di 10px */
+}
+
+.thumbnail .item .content .title{
+    font-weight: 500; /* Imposta il peso del font del titolo a 500 */
+}
+
+.thumbnail .item .content .description{
+    font-weight: 300; /* Imposta il peso del font della descrizione a 300 */
+}
+
+/* arrows */
+.arrows{
+    position: absolute; /* Posiziona le frecce in modo assoluto */
+    top: 80%; /* Posiziona le frecce al 80% dall'alto */
+    right: 52%; /* Posiziona le frecce a sinistra del 52% della larghezza */
+    z-index: 100; /* Imposta lo z-index per portarle sopra gli altri elementi */
+    width: 300px; /* Larghezza delle frecce */
+    max-width: 30%; /* Limita la larghezza massima al 30% */
+    display: flex; /* Usa il flexbox per il layout */
+    gap: 10px; /* Distanza tra le frecce */
+    align-items: center; /* Allinea le frecce al centro */
+}
+
+.arrows button{
+    width: 40px; /* Imposta la larghezza del pulsante della freccia */
+    height: 40px; /* Imposta l'altezza del pulsante della freccia */
+    border-radius: 50%; /* Arrotonda il bordo del pulsante */
+    background-color: #150734; /* Colore di sfondo del pulsante */
+    border: none; /* Rimuove il bordo del pulsante */
+    color: #fff; /* Colore del testo del pulsante */
+    font-family: "PT Sans", sans-serif; /* Imposta il font per il pulsante */
+    font-weight: bold; /* Imposta il peso del font del pulsante a bold */
+    transition: .5s; /* Aggiunge una transizione di 0.5 secondi per l'hover */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.arrows button:hover{
+    background-color: #fff; /* Cambia il colore di sfondo a bianco quando il mouse passa sopra */
+    color: #000; /* Cambia il colore del testo a nero */
+}
+
+/* Animazione */
+.carousel .list .item:nth-child(1){
+    z-index: 1; /* Porta il primo elemento del carosello in primo piano */
+}
+
+/* Animazione del contenuto del primo elemento */
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px); /* Sposta il contenuto verso il basso di 50px */
+    filter: blur(20px); /* Applica un effetto di sfocatura */
+    opacity: 0; /* Imposta l'opacità a zero */
+    animation: showContent .2s 1s linear 1 forwards; /* Esegui l'animazione per mostrare il contenuto */
+}
+
+@keyframes showContent{
+    to{
+        transform: translateY(0px); /* Ripristina la posizione verticale */
+        filter: blur(0px); /* Rimuove la sfocatura */
+        opacity: 1; /* Imposta l'opacità a 1 */
+    }
+}
+
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1s!important; /* Ritarda l'animazione del titolo di 1.2 secondi */
+}
+
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.1s!important; /* Ritarda l'animazione del topic di 1.4 secondi */
+}
+
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.2s!important; /* Ritarda l'animazione della descrizione di 1.6 secondi */
+}
+
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.3s!important; /* Ritarda l'animazione dei pulsanti di 1.8 secondi */
+}
+
+/* Animazione quando si clicca su "next" */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px; /* Ridimensiona l'immagine */
+    height: 220px; /* Ridimensiona l'immagine */
+    position: absolute; /* Posiziona l'immagine in modo assoluto */
+    bottom: 50px; /* Imposta la posizione verso il fondo */
+    left: 50%; /* Centra l'immagine orizzontalmente */
+    border-radius: 30px; /* Arrotonda gli angoli dell'immagine */
+    animation: showImage .4s linear 1 forwards; /* Esegue l'animazione dell'immagine */
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0; /* Ripristina la posizione dell'immagine */
+        left: 0;
+        width: 100%; /* Ripristina le dimensioni */
+        height: 100%;
+        border-radius: 0; /* Rimuove gli angoli arrotondati */
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden; /* Nasconde il contenuto che esce dalla miniatura */
+    animation: showThumbnail .3s linear 1 forwards; /* Esegue l'animazione della miniatura */
+}
+
+.carousel.prev .list .item img{
+    z-index: 100; /* Imposta lo z-index per l'immagine precedente */
+}
+
+@keyframes showThumbnail{
+    from{
+        width: 0; /* Inizia con larghezza 0 */
+        opacity: 0; /* Inizia con opacità 0 */
+    }
+}
+
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards; /* Esegue l'animazione per gli effetti "next" */
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px); /* Inizia traslando la miniatura di 150px verso destra */
+    }
+}
+
+/* Tempo di esecuzione del carosello */
+.carousel .time{
+    position: absolute; /* Posiziona la barra del tempo in modo assoluto */
+    z-index: 1000; /* Porta la barra sopra gli altri elementi */
+    width: 0%; /* Imposta la larghezza iniziale a 0% */
+    height: 3px; /* Imposta l'altezza della barra a 3px */
+    background-color: #f1683a; /* Imposta il colore della barra a arancione */
+    left: 0; /* Posiziona la barra a sinistra */
+    top: 0; /* Posiziona la barra in cima */
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards; /* Esegui l'animazione della barra del tempo */
+}
+
+@keyframes runningTime{
+    from{ width: 100%} /* Inizia con larghezza 100% */
+    to{width: 0} /* Finisce con larghezza 0% */
+}
+
+/* Effetto quando si clicca su "prev" */
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2; /* Porta il secondo elemento in secondo piano */
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards; /* Esegue l'animazione di uscita dell'immagine */
+    position: absolute; /* Posiziona l'immagine in modo assoluto */
+    bottom: 0; /* Posiziona l'immagine verso il fondo */
+    left: 0; /* Posiziona l'immagine a sinistra */
+}
+
+@keyframes outFrame{
+    to{
+        width: 150px; /* Ridimensiona l'immagine */
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px; /* Arrotonda gli angoli dell'immagine */
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden; /* Nasconde il contenuto che esce dalla miniatura */
+    opacity: 0; /* Imposta l'opacità della miniatura a zero */
+    animation: showThumbnail .3s linear 1 forwards; /* Esegue l'animazione della miniatura */
+}
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none; /* Disabilita gli eventi del mouse per i pulsanti durante l'animazione */
+}
+
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important; /* Esegue l'animazione per nascondere il contenuto */
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px); /* Sposta il contenuto verso l'alto */
+        filter: blur(20px); /* Applica un effetto di sfocatura */
+        opacity: 0; /* Imposta l'opacità a zero */
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0; /* Rimuove il padding destro sullo schermo piccolo */
+    }
+
+    .carousel .list .item .content .title{
+        font-size: 30px; /* Aumenta la dimensione del font del titolo per schermi piccoli */
+    }
+}
+
+.title {
+    color: red;
+    font-weight: bold; /* Imposta il peso del font a bold */
+    font-size: 15px;
+    text-align: left;
+    font-family: "PT Sans", sans-serif; /* Imposta il font del corpo a "PT Sans" */
+}
+
+/* Stili per la navbar */
+.navbar {
+    background-color: transparent;   /* Colore di sfondo della navbar */
+    padding: 10px 0;          /* Spazio sopra e sotto la navbar */
+    font-size: 100px; /* Imposta la dimensione del testo a 20px */
+}
+
+.navbar a {
+    color: #f1683a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 1s;
+    font-size: 40px; /* Imposta la dimensione del testo a 40px */
+    right: 20px;
+    position: relative;
+    left: 1100px;
+    top: 40px;
+    box-sizing: 50px;
+    border: 4px solid white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.navbar a:hover {
+    color: #150734;  
+}
+
+.thumbnail {
+    cursor: pointer; 
+}
