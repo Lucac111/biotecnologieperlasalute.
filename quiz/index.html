@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website HTML CSS JS | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <a href="#" class="logo">Quiz sulle Biotecnologie per la Salute</a>
+            <nav class="navbar">
+                <a href="../indexI.html" class="active">HOME</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Quiz sulle Biotecnologie per la Salute</h1>
+                    <div class="quiz-header">
+                        <span></span>
+                        <span class="header-score">Punteggio: 0 / 15</span>
+                    </div>
+                    <h2 class="question-text">Cosa sono le biotecnologie per la salute?</h2>
+
+                    <div class="option-list">
+                        <<!-- <div class="option">
+                            <span>A. L'uso di chimica per produrre medicinali</span>
+                        </div>
+                        <div class="option">
+                            <span>B. L'uso di macchine per produrre energia</span>
+                        </div>
+                        <div class="option">
+                            <span>C. L'uso di organismi viventi per produrre beni e servizi</span>
+                        </div>
+                        <div class="option">
+                            <span>D. L'uso di vari strumenti migliorare la diagnosi, la prevenzione, e il trattamento delle malattie</span>
+                        </div> -->
+                    </div>
+
+                    <div class="quiz-footer">
+                        <span class="question-total">1 di 15</span>
+                        <button class="next-btn">Prossima</button>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <h2>Risultato</h2>
+                    <div class="percentage-container">
+                        <div class="circular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+
+                        <span class="score-text">Punteggio 0 di 15</span>
+                    </div>
+                    <div class="buttons">
+                        <button class="tryAgain-btn">Riprova</button>
+                        <button class="goHome-btn">Home</button>
+                    </div>
+                </div>
+            </section>
+            <section class="home">
+                <div class="home-content">
+                    <h1>Quiz sulle Biotecnologie <br> per la Salute</h1>
+                    <p>Quante ne sai sulle Biotecnologie per la Salute?<br>Fai il Quiz e scoprilo</p>
+                    <button class="start-btn">Inizia il Quiz</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup-info">
+        <h2>Quiz sulle Biotecnologie per la Salute</h2>
+        <span class="info"><br>Il Quiz è composto da 15 domande a risposta multipla<br><br>Una volta terminato il Quiz, in base al vostro punteggio vi verrà data una valutazione<br><br>Buona fortuna🍀</span>
+
+        <div class="btn-group">
+            <button class="info-btn exit-btn">Esci dal Quiz</button>
+            <a href="#" class="info-btn continue-btn">Continua</a>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
