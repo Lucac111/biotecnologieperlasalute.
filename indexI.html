@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descrizione della pagina">
+    <meta name="author" content="Luca Chichiricco">
+    <title>Titolo della Pagina</title>
+    <link rel="stylesheet" href="style.css"> <!-- Collega il tuo file CSS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- Collego jquery -->
+   
+    <title>Biotecnologie per la Salute</title>
+  <meta name="title" content="Biotecnologie per la Salute">
+  <meta name="description" content="Biotecnologie per la Salute">
+
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            //definisco la funzione che dice alla regola css .altezzamassima di essere alta quanto l'altezza della finestra
+            function resize_altezza(){
+                jQuery(".altezzamassima").css({'height': jQuery(window).height()}); 
+            }
+            //lancio la funzione e quindi funziona
+            resize_altezza();
+            //dico alla funzione di funzionare anche quando ridimensiono la pagina del browser
+            jQuery(window).resize(function(){
+                resize_altezza()
+            });
+        });
+
+        // Funzione per aprire la finestra di login
+function openLogin() {
+    document.getElementById('loginOverlay').classList.add('active');
+    document.getElementById('registerOverlay').classList.remove('active');
+}
+
+// Funzione per chiudere la finestra di login
+function closeLogin() {
+    document.getElementById('loginOverlay').classList.remove('active');
+}
+
+// Funzione per aprire la finestra di registrazione
+function openRegister() {
+    document.getElementById('registerOverlay').classList.add('active');
+    document.getElementById('loginOverlay').classList.remove('active');
+}
+
+// Funzione per chiudere la finestra di registrazione
+function closeRegister() {
+    document.getElementById('registerOverlay').classList.remove('active');
+}
+
+// Optional: Chiudere la finestra di login quando si clicca fuori dalla finestra
+document.getElementById('loginOverlay').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeLogin();
+    }
+});
+
+// Optional: Chiudere la finestra di registrazione quando si clicca fuori dalla finestra
+document.getElementById('registerOverlay').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeRegister();
+    }
+});
+
+    </script>
+
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+<body>
+
+    
+        
+        <div id="main-container">
+
+            <div id="menu-container">
+                <!-- hamburger menu -->
+                <div id="menu">
+                    <div id="menu_interno">
+                        <div id="menu_navigazione">
+                            <ul>
+                               <!-- <li class="menu-item"><strong>HOME</strong></li> -->
+                     
+                              </li>
+                              <li class="menu-item"><a href="wren-master/index1.html" class="menu-link"><strong>BLOG</strong></a>
+                                <li class="menu-item"><a href="contatti.html" class="menu-link"><strong>CONTATTI</strong></a></li>
+                                <li class="menu-item" onclick="openLogin()"><strong>LOGIN</strong></li>
+                            </ul>
+                        </div>
+                    <div id="overlay"></div>
+                    <div id="mobile-menu" class="mobile-main-menu">
+                        <ul>
+                            <li class="special"><h3><strong>APPLICAZIONI</strong></h3></li>
+          
+                            <li><a href="Applicazioni/diagnostica.html">Diagnostica</a></li>
+                            <li><a href="terapie/geniche.html">Terapie Innovative</a></li>
+                            <li><a href="med/CELLULE.html">Medicina Rigenerativa</a></li>
+                            <li><a href="vaccini/vac.html">Produzione di farmaci e vaccini</a></li>
+                            <li><a href="dispositivi/bio.html">Dispositivi medici e diagnostici</a></li>  
+                            <li><a href="ingegneria/editing.html">Ingegneria Genetica</a></li> 
+                            <li><a href="prevenzione/rapido.html">Prevenzione e gestione delle epidemie</a></li>
+                            <li><a href="oncologia/immuno.html">Oncologia</a></li>
+                            <li><a href="info/omiche.html">Bioinformatica e analisi dei dati</a></li>
+                            <li class="special2">Cooming Soon...</li>
+        
+                            <div class="mobile-only"></div>
+                            <!-- <li class="mobile-only"><strong>HOME</strong></li> -->
+                                <li class="mobile-only"><strong>BLOG</strong></li>
+                                <li class="mobile-only"><strong>CONTATTI</strong></li>
+                        </ul>
+                    </div>
+                        <!-- hamburger menu -->
+                        <button id="menu-btn" class="hamburger " type="button">
+                            <span class="hamburger-top"></span>
+                            <span class="hamburger-middle"></span>
+                            <span class="hamburger-bottom"></span>
+                        </button>
+        
+                        <div class="clr"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="section1" class="altezzamassima">
+                <div class="container">
+                <div class="scroll-arrow">
+                    <svg width="30px" height="21px">
+                        <path stroke="#f0f0f0" fill="none" stroke-width="5px" d="M2.000,5.000 L15.000,18.000 L28.000,5.000"></path>
+                    </svg>
+                </div>
+                <div class="box-testo">
+                    <h1 class="grande">Biotecnologie<br>per la Salute</h1>
+                </div>
+                <div class="box-testo2">
+                    <h1 class="piccolo">Innovazione per la Vita:<br>Biotecnologie al servizio della Salute</h1>
+                    <hr class="linea">
+                </div>
+                <div class="clr"></div>
+            </div>
+            </div>
+    
+            <div id="section2" class="altezzamassima">
+                <div class="container">
+                    <div class="scroll-arrow2">
+                        <svg width="30px" height="21px">
+                            <path stroke="#f0f0f0" fill="none" stroke-width="5px" d="M2.000,5.000 L15.000,18.000 L28.000,5.000"></path>
+                        </svg>
+                    </div>
+                    <div class="rectangle"></div>
+                    <div class="box-testo3">
+                        <h2><strong>Che cosa sono le <br> Biotecnologie per la Salute?</strong></h2>
+                        <hr class="linea2">
+                    </div>
+                    <div class="box-testo4">
+                        <h3>Le biotecnologie per la salute rappresentano un campo interdisciplinare <br> che utilizza strumenti biologici, chimici, e tecnologici <br> per migliorare la diagnosi, la prevenzione, e il trattamento delle malattie, <br> nonché per promuovere il benessere umano.</h3>
+                    </div>
+                    <div class="image-container">
+                        <img src="immagini/2.jpg" class="image-sezione2">
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            
+            <div id="section3" class="altezzamassima">
+                <div class="container">
+                    <div class="scroll-arrow3">
+                        <svg width="30px" height="21px">
+                            <path stroke="#f0f0f0" fill="none" stroke-width="5px" d="M2.000,5.000 L15.000,18.000 L28.000,5.000"></path>
+                        </svg>
+                    </div>
+                    <div id="background-container"></div>
+                    <div class="container1">
+                        <div class="quiz-container1">
+                              <a href="slider_1-main/indexS.html" class="quiz-button1"><strong>Leggi di più</strong></a>
+                            </div>
+                        </div>
+                        <div class="box-testo8">
+                            <h1 class="grande">Vantaggi e Sfide</h1>
+                        </div>
+                        <div class="box-testo9">
+                            <h1 class="piccolo">Le biotecnologie per la salute offrono straordinarie<br>opportunità per migliorare la qualità della vita, ma<br>comportano anche sfide importanti da affrontare, sia a<br>livello etico che tecnologico. Esploriamo i principali<br>vantaggi e le questioni critiche di questo settore<br>in continua evoluzione.</h1>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                    <div id="background-container2"></div>
+                    <div class="container2">
+                        <div class="quiz-container2">
+                            <a href="javascript:void(0);" class="quiz-button2" id="leggi-di-piu-button"><strong>Leggi di più</strong></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Finestra Modale -->
+                    <article id="modal-container">
+                      <section id="modal-section">
+                        <button id="modal-close-button">X</button>
+                        <h3 id="modal-title">Vantaggi e sfide delle Biotecnologie per la Salute</h3>
+                        <p id="modal-content">Le biotecnologie per la salute stanno rivoluzionando il campo medico, aprendo nuove strade per trattamenti più efficaci, diagnosi precoci e soluzioni innovative per molte malattie. Grazie ai progressi in questo settore, la medicina sta vivendo un periodo di grande trasformazione, che offre enormi vantaggi, ma che pone anche sfide significative da affrontare.
+                            <br><br>
+                            <h1><strong>Vantaggi delle Biotecnologie per la Salute</strong></h1>
+                            <strong1>Trattamenti Personalizzati</strong1>
+                            <br><br>
+                            Le biotecnologie permettono lo sviluppo di terapie su misura, adattate alle specifiche esigenze genetiche di ogni individuo. Questo approccio, conosciuto come medicina personalizzata, consente trattamenti più efficaci con minori effetti collaterali, migliorando la qualità della vita dei pazienti.
+                            <br><br>
+                            <strong1>Diagnosi Precoci e Più Accurate</strong1>
+                            <br><br>
+                            Grazie alla genetica e alla diagnostica avanzata, le biotecnologie rendono possibile identificare malattie in fase precoce, spesso prima che i sintomi si manifestino. Ciò permette interventi tempestivi, aumentando le possibilità di successo nelle cure e riducendo i costi sanitari.
+                            <br><br>
+                            <strong1>Terapie Innovative per Malattie Rare e Croniche</strong1>
+                            <br><br>
+                            Le biotecnologie stanno dando vita a trattamenti per malattie rare, genetiche e croniche che fino a poco tempo fa erano incurabili. Nuove terapie come la terapia genica, l’immunoterapia e i farmaci biologici stanno migliorando sensibilmente le condizioni di vita dei pazienti.
+                            <br><br>
+                            <strong1>Prevenzione e Salute Pubblica</strong1>
+                            <br><br>
+                            Le biotecnologie stanno contribuendo anche a migliorare la prevenzione. Grazie a vaccini innovativi e a test diagnostici avanzati, è possibile prevenire malattie infettive e monitorare la salute pubblica in modo più efficace. Questo è stato particolarmente evidente durante la pandemia di COVID-19, dove le biotecnologie hanno svolto un ruolo cruciale nello sviluppo di vaccini.
+                            <br><br>
+                            <h1><strong>Sfide delle Biotecnologie per la Salute</strong></h1>
+                            <strong1>Problemi Etici</strong1>
+                            <br><br>
+                            Le biotecnologie sollevano importanti questioni etiche, specialmente quando si tratta di manipolazione genetica e terapia genica. Il miglioramento genetico, ad esempio, può portare a dibattiti su cosa sia "naturale" o "accettabile" nell'umanità. L’uso di tecniche come la modifica del genoma (CRISPR) può sollevare timori riguardo a possibili abusi o alle implicazioni a lungo termine.
+                            <br><br>
+                            <strong1>Accessibilità e Disuguaglianze</strong1>
+                            <br><br>
+                            Nonostante i progressi, molte delle tecnologie biotecnologiche rimangono inaccessibili per grandi segmenti della popolazione mondiale. Le terapie avanzate e i farmaci biologici sono spesso costosi e, se non regolamentati correttamente, potrebbero aumentare le disuguaglianze sanitarie tra paesi ricchi e poveri.
+                            <br><br>
+                            <strong1>Sicurezza e Effetti Collaterali</strong1>
+                            <br><br>
+                            Le biotecnologie, pur promettendo soluzioni innovative, comportano anche rischi. Le terapie geniche, ad esempio, se non monitorate adeguatamente, potrebbero avere effetti collaterali imprevisti o anche pericolosi, come reazioni immunitarie gravi. La necessità di test rigorosi e una sorveglianza costante sono essenziali per garantire la sicurezza a lungo termine.
+                            <br><br>
+                            <strong1>Regolamentazione e Approccio Normativo</strong1>
+                            <br><br>
+                            La rapida evoluzione delle biotecnologie rende difficile la creazione di normative efficaci e aggiornate. Gli organismi di regolamentazione, come la FDA (Food and Drug Administration) o l'EMA (European Medicines Agency), devono affrontare la sfida di bilanciare l'innovazione con la sicurezza e l’etica. Le normative dovranno evolversi continuamente per affrontare le nuove scoperte e le potenziali problematiche.
+                            <br><br>
+                            <strong1>Rischi di Abusi</strong1>
+                            <br><br>
+                            Le biotecnologie offrono potenzialità enormi, ma rischiano anche di essere sfruttate in modo improprio. L'uso di tecniche avanzate per scopi non etici, come la creazione di "bambini progettati" o la manipolazione genetica per finalità eugenetiche, solleva preoccupazioni morali e sociali che richiedono attenzione e regolamentazione.
+                           <h1><strong> Conclusioni</strong></h1>
+                            Le biotecnologie per la salute rappresentano un faro di speranza per il futuro della medicina, ma devono essere affrontate con cautela e responsabilità. I vantaggi offerti, in termini di trattamenti personalizzati, diagnosi precoci e nuove cure, sono innegabili. Tuttavia, le sfide etiche, sociali e tecnologiche sono altrettanto rilevanti. Il progresso in questo campo deve essere accompagnato da un forte impegno verso la sicurezza, l'accessibilità e la regolamentazione, affinché le biotecnologie possano veramente migliorare la vita delle persone in modo equo e responsabile.</p>
+                      </section>
+                    </article>
+                        <div class="box-testo6">
+                            <h1 class="grande6">Principali Applicazioni</h1>
+                        </div>
+                        <div class="box-testo7">
+                            <h1 class="piccolo7">Le biotecnologie per la salute trovano applicazione in numerosi<br>ambiti, rivoluzionando il modo in cui affrontiamo la diagnosi,<br>il trattamento e la prevenzione delle malattie. Scopriamo insieme<br>alcune delle principali aree di innovazione che stanno<br>trasformando la medicina moderna.</h1>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                    </div>
+ 
+            <div id="section4" class="altezzamassima">
+                <div class="container">
+                    <div class="quiz-container">
+                        <h2 class="quiz-title"><strong>Quiz sulle biotecnologie per la salute</strong></h2>
+                        <p class="quiz-subtitle"><strong>Testa le tue conoscenze facendo il Quiz</strong></p>
+                        <div class="quiz-box">
+                          <a href="quiz/index.html" class="quiz-button"><strong>Vai alla pagina del Quiz</strong></a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        
+<!-- Finestra di Login -->
+<div class="overlay" id="loginOverlay">
+    <div class="login-container">
+        <button class="close-login" onclick="closeLogin()">&#10006;</button>
+        <h2>LOGIN</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <p class="register-text">Non hai un account? <a href="#" onclick="openRegister()">Registrati</a></p>
+    </div>
+</div>
+
+<!-- Finestra di Registrazione -->
+<div class="overlay" id="registerOverlay">
+    <div class="register-container">
+        <button class="close-login" onclick="closeRegister()">&#10006;</button>
+        <h2>REGISTRAZIONE</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="newUsername">Username</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="newEmail">Email</label>
+                <input type="email" id="newEmail" name="newEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            </div>
+            <button type="submit" class="register-btn">Registrati</button>
+        </form>
+        <p class="back-to-login">
+            <a href="#" onclick="openLogin()">&#8592; Torna al Login</a>
+        </p>
+    </div>
+</div>
+    
+<div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+        <p>
+            Questo Sito utilizza cookie tecnici e, previo tuo consenso, anche cookie di prestazione per raccogliere informazioni sull’utilizzo del sito e cookie di profilazione.
+            Può gestire le impostazioni relative ai cookie, selezionando le opzioni indicate di seguito o cliccando su “Mostra dettagli”.
+            Cliccando sul pulsante "Accetta tutto", acconsenti all'utilizzo dei cookie di prestazione e dei cookie di profilazione. 
+            <br>Se, invece, non desideri acconsentirvi, clicca sul pulsante “Rifiuta tutto” e il sito utilizzerà solo i cookie strettamente necessari.
+            Per maggiori informazioni sui cookie utilizzati, consulta la <a href="#" class="cookie-link">Cookie Policy</a>.
+        </p>
+        <form id="cookieForm">
+            <div class="cookie-options">
+                <label>
+                    <input type="checkbox" id="strictlyNecessary" checked disabled>
+                    Cookie strettamente necessari (sempre attivi)
+                </label>
+                <label>
+                    <input type="checkbox" id="performanceCookies">
+                    Cookie di prestazione
+                </label>
+                <label>
+                    <input type="checkbox" id="profilingCookies">
+                    Cookie di profilazione
+                </label>
+                <label>
+                    <input type="checkbox" id="functionalCookies">
+                    Cookie di funzionalità
+                </label>
+            </div>
+        </form>
+        
+    
+            </div>
+            <div class="cookie-buttons">
+                <button type="button" class="cookie-btn accept-all" onclick="acceptAllCookies()">Accetta tutto</button>
+                <button type="button" class="cookie-btn reject-all" onclick="rejectAllCookies()">Rifiuta tutto</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+    <footer>
+        <p><strong>&copy; 2025 Luca Chichiricco. Tutti i diritti riservati.</strong></p>
+    </footer>
+    
+    <script src="script.js"></script> <!-- Collega il tuo file JS -->
+</body>
+</html>
