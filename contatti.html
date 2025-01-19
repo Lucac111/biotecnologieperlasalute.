@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTATTI</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #150734;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #00c4fe;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .contact-section {
+            background: #E0E5EB;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: black;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 5px;
+            outline: none;
+            background: white;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #00c4fe;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .submit-btn {
+            grid-column: 1 / -1;
+            padding: 15px;
+            background-color: #00c4fe;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-section {
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .info-section p {
+            margin: 10px 0;
+        }
+
+        .info-section a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .info-section a:hover {
+            text-decoration: underline;
+        }
+
+        #menu{ position: fixed; z-index: 7; width: 100%; height: auto; top: 11px;}
+  #menu_interno{ width: 100%; height: 0 auto; }
+  #menu_navigazione{
+    width: 95%;
+    position: relative;
+    float: left;
+}
+ul{
+    display: flex; /* Menu orizzontale */
+    justify-content: flex-end; /* Sposta il menu a destra */
+  }
+li{
+    font-family: "PT Sans", sans-serif; 
+    display: block; 
+    color: #f0f0f0; 
+    font-size: 19px; 
+    }
+
+.clr{ clear: both;}
+.menu-link {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit; /* Inherit il colore dal genitore (ad esempio la lista o il menu-item) */
+}
+
+.menu-link:hover {
+    text-decoration: none; /* Rimuove la sottolineatura anche al passaggio del mouse */
+    color: inherit; /* Mantiene il colore originale al passaggio del mouse */
+}
+
+/* Stili di base per gli elementi del menu */
+.menu-item {
+    position: relative; /* Necessario per gestire il pseudo-elemento */
+    top: -10px;
+    right: 80px;
+    list-style-type: none;
+    font-weight: 500; 
+    font-family: "PT Sans", sans-serif;
+    color: #f0f0f0; /* Colore iniziale del testo */
+    border: 2px solid #f0f0f0;
+    border-radius: 10px; /* Angoli arrotondati */
+    text-align: center;
+    font-size: 19px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Angoli arrotondati */
+    overflow: hidden; /* Nasconde l'animazione fuori dal bordo */
+    transition: color 0.3s ease; /* Transizione per il colore del testo */
+}
+
+/* Pseudo-elemento per il riempimento animato */
+.menu-item::before {
+    content: "";
+    position: absolute;
+    top: 100%; /* Posizionato fuori dall'elemento, in basso */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Colore di riempimento */
+    z-index: -1; /* Dietro il testo */
+    transition: transform 0.3s ease; /* Transizione fluida per il movimento */
+    transform: translateY(0); /* Stato iniziale, fuori dalla vista */
+}
+
+/* Hover: il riempimento va dal basso verso l'alto */
+.menu-item:hover::before {
+    transform: translateY(-100%); /* Porta il riempimento completamente sopra */
+}
+
+.menu-item:hover {
+    color: #150734; /* Cambia il colore del testo */
+    text-decoration: underline; cursor: pointer;
+}
+
+/* Mouse out: ritorno verso l'alto */
+.menu-item::before {
+    transform: translateY(100%); /* Torna verso l'alto */
+}
+
+.menu-item:hover {
+    color: rgb(0, 0, 0); /* Cambia il colore del testo al passaggio del mouse */
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CONTATTACI</h1>
+    </header>
+
+    <div id="main-container">
+
+        <div id="menu-container">
+            <!-- hamburger menu -->
+            <div id="menu">
+                <div id="menu_interno">
+                    <div id="menu_navigazione">
+                        <ul>
+                            <li class="menu-item"><a href="indexI.html" class="menu-link"><strong>HOME</strong></a></li>
+                        </ul>
+                    </div>
+                <div id="overlay"></div>
+               
+            </div>
+            
+        </div>
+    <div class="container">
+        <section class="contact-section">
+            <h2>Inviaci un Messaggio</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" placeholder="Inserisci il tuo nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Inserisci la tua email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Oggetto</label>
+                    <input type="text" id="subject" placeholder="Inserisci l'oggetto del messaggio">
+                </div>
+                <div class="form-group">
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" placeholder="Scrivi il tuo messaggio qui..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Invia</button>
+            </form>
+        </section>
+        <section class="info-section">
+            <p><strong>Indirizzo:</strong> Teramo</p>
+            <p><strong>Email:</strong> <a href="mailto:luca.chichiricco@studenti.unite.it">luca.chichiricco@studenti.unite.it</a></p>
+            <p><strong>Telefono:</strong> +39 3393585743</p>
+        </section>
+    </div>
+</body>
+</html>
