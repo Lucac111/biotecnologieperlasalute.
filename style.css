@@ -1,0 +1,995 @@
+/* styles.css */
+
+
+#section1{ width: 100%; height: 600px; background-position: center; background-size: cover; /* L'immagine riempie la sezione */ background-repeat: no-repeat; background-color: #150734; background-image: url(immagini/1.jpg);}
+#section2{ width: 100%; height: 600px; background-position: center; background-size: cover; /* L'immagine riempie la sezione */ background-repeat: no-repeat; background-color: #150734; background-image: url();}
+#section3{ width: 100%; height: 600px; background-position: center; background-size: cover; /* L'immagine riempie la sezione */ background-repeat: no-repeat; background-color: #150734; background-image: url(immagini/3.jpg);}
+#section4{ width: 100%; height: 600px; background-position: center; background-size: cover; /* L'immagine riempie la sezione */ background-repeat: no-repeat; background-color: #150734; background-image: url(wren-master/assets/images/dna.png);}
+
+.box-testo{ position: absolute; bottom: 200px; left: 20px; font-weight: 700; font-family: "PT Sans", sans-serif; display: block; height: 450px; animation: fadeInUp 0.5s ease-in-out; color: #fff;}
+body {
+    margin: 0px; /*elimino bordo*/
+ }
+ .box-testo2{ position: absolute; bottom: 200px; left: 20px; font-weight: 200; font-family: "PT Sans", sans-serif; display: block; height: 20px; animation: fadeInUp 0.5s ease-in-out 0.2s; animation-fill-mode: both; color: #fff;}
+
+ .grande {
+    font-size: 96px;
+    text-align: left;
+  }
+
+  .piccolo {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  #menu{ position: fixed; z-index: 7; width: 100%; height: auto; top: 11px;}
+  #menu_interno{ width: 100%; height: 0 auto; }
+  #menu_navigazione{
+    width: 95%;
+    position: relative;
+    float: left;
+}
+ul{
+    display: flex; /* Menu orizzontale */
+    justify-content: flex-end; /* Sposta il menu a destra */
+  }
+li{
+    font-family: "PT Sans", sans-serif; 
+    display: block; 
+    color: #f0f0f0; 
+    font-size: 19px; 
+    }
+
+.clr{ clear: both;}
+
+.linea {
+    border: none; /* Rimuove lo stile predefinito */
+    height: 15px; /* Altezza della linea */
+    background-color: #00c4fe; /* Colore della linea */
+    margin: 10px 0; /* Spaziatura sopra e sotto la linea */
+}
+
+.linea2 {
+    border: none; /* Rimuove lo stile predefinito */
+    height: 15px; /* Altezza della linea */
+    background-color: #000000; /* Colore della linea */
+    margin: 7px 0; /* Spaziatura sopra e sotto la linea */
+}
+
+#section2 .box-testo3 {
+    background-color: #00c4fe;  /* Sfondo trasparente */
+    color:white;  /* Colore del testo */
+    padding: 34px;
+    width: 20%;
+    right:  556px;
+    margin: 0 auto;  /* Centrato */
+    position: relative;
+    top: 634px;  /* Imposta la distanza rispetto alla parte superiore della sezione */
+    z-index: 3;
+    animation: fadeInUp 0.5s ease-in-out 0.2s; animation-fill-mode: both;
+    text-align: center;
+}
+
+#section2 .box-testo4 {
+    background-color: #E0E5EB;  /* Sfondo trasparente */
+    color: black;  /* Colore del testo */
+    padding: 30px;
+    text-align: left;
+    width: 60.9%;
+    left: 124px;
+    margin: 0 auto;  /* Centrato */
+    position: relative;
+    top: 448.5px;  /* Imposta la distanza rispetto alla parte superiore della sezione */
+    padding-left: 285px;
+    animation: fadeInUp 0.5s ease-in-out 0.2s; animation-fill-mode: both;
+z-index: 2;
+}
+
+#section2 .image-sezione2 {
+    width: 100%; /* L'immagine occupa tutta la larghezza disponibile */
+    height: 684px; /* Mantiene le proporzioni dell'immagine */
+    top: 820px;
+    position: absolute;
+    
+}
+
+/* Stili di base per gli elementi del menu */
+.menu-item {
+    position: relative; /* Necessario per gestire il pseudo-elemento */
+    list-style-type: none;
+    font-weight: 500; 
+    font-family: "PT Sans", sans-serif;
+    color: #f0f0f0; /* Colore iniziale del testo */
+    border: 2px solid #f0f0f0;
+    border-radius: 10px; /* Angoli arrotondati */
+    text-align: center;
+    font-size: 19px;
+    margin: 0px 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Angoli arrotondati */
+    overflow: hidden; /* Nasconde l'animazione fuori dal bordo */
+    transition: color 0.3s ease; /* Transizione per il colore del testo */
+    margin: 0px 40px;  
+    padding: 10px;
+}
+
+/* Pseudo-elemento per il riempimento animato */
+.menu-item::before {
+    content: "";
+    position: absolute;
+    top: 100%; /* Posizionato fuori dall'elemento, in basso */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Colore di riempimento */
+    z-index: -1; /* Dietro il testo */
+    transition: transform 0.3s ease; /* Transizione fluida per il movimento */
+    transform: translateY(0); /* Stato iniziale, fuori dalla vista */
+}
+
+/* Hover: il riempimento va dal basso verso l'alto */
+.menu-item:hover::before {
+    transform: translateY(-100%); /* Porta il riempimento completamente sopra */
+}
+
+.menu-item:hover {
+    color: #150734; /* Cambia il colore del testo */
+    text-decoration: underline; cursor: pointer;
+}
+
+/* Mouse out: ritorno verso l'alto */
+.menu-item::before {
+    transform: translateY(100%); /* Torna verso l'alto */
+}
+
+.menu-item:hover {
+    color: rgb(0, 0, 0); /* Cambia il colore del testo al passaggio del mouse */
+}
+
+
+/*hamburger menu*/
+.hamburger {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: space-around; /* Spaziatura uniforme tra le barre */
+    cursor: pointer; /* Indica che è cliccabile */
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    width: 25px;
+    height: 5px;
+    left: 0;
+    top: 0;
+    background: #fff;
+    transition: all 0.3s;
+    border-radius: 5px; /* Angoli arrotondati */
+    justify-content: space-around; /* Spaziatura uniforme tra le barre */
+}
+
+.hamburger-top {
+    
+    top: 0; /* Prima barra in alto */
+}
+.hamburger-middle {
+    transform: translateY(5px);
+    top: 4px; /* Seconda barra */
+}
+
+.hamburger-bottom {
+    transform: translateY(10px);
+    top: 8px; /* Terza barra */
+
+}
+
+.open {
+    transform: rotate(90deg);
+}
+
+.open .hamburger-top{
+    transform: rotate(45deg) translateY(10px) translateX(10px);
+}
+
+.open .hamburger-middle{
+    display: none;
+}
+
+.open .hamburger-bottom{
+    transform: rotate(-45deg) translateY(5px)  translateX(-5px);
+}
+
+
+
+/*overlay*/
+.overlay-show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.mobile-main-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: #000;
+    z-index: 4;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    border: none;
+    overflow: hidden; /* Nasconde l'animazione fuori dal bordo */
+}
+
+.show-menu {
+    transform: translateX(0);
+}
+
+.mobile-main-menu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 50px;
+    width: 100%;
+    border: none;
+}
+
+.mobile-main-menu ul li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 1px #555 dotted;
+    width: 100%;
+    text-align: right;
+    padding-bottom: 8px;
+    text-decoration: none;
+}
+
+.mobile-main-menu ul li a {
+    color: #fff;
+    transition: color 0.6s;
+    border: none;
+    text-decoration: none;
+}
+
+.mobile-main-menu ul li a:hover {
+    color: #aaa;
+    transition: color 0.6s;
+    border: none;
+    text-decoration: underline;
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+/*animazioni*/
+
+@keyframes fadeInUp {
+0%{ opacity: 0;
+    transform: translateY(140px);
+}
+    100% { opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Stili base per la freccia */
+.scroll-arrow {
+    position: absolute;
+    bottom: 20px; /* Posiziona la freccia in basso in ogni sezione */
+    left: 50%; /* Centra la freccia orizzontalmente */
+    transform: translateX(-50%);
+    animation: bounce 1.5s infinite; /* Effetto rimbalzo */
+    cursor: pointer;
+    z-index: 1;
+}
+
+#section2 .scroll-arrow2 {
+    position: absolute;
+    left: 50%; /* Centra la freccia orizzontalmente */
+    transform: translateX(-50%);
+    animation: bounce 1.5s infinite; /* Effetto rimbalzo */
+    cursor: pointer;
+    z-index: 4;
+    top: 1600px
+}
+
+#section3 .scroll-arrow3 {
+    position: absolute;
+    left: 50%; /* Centra la freccia orizzontalmente */
+    transform: translateX(-50%);
+    animation: bounce 1.5s infinite; /* Effetto rimbalzo */
+    cursor: pointer;
+    z-index: 1;
+    top: 2422px;
+}
+
+
+
+/* Animazione del rimbalzo */
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, 0); /* Posizione iniziale */
+    }
+    50% {
+        transform: translate(-50%, 10px); /* Muove la freccia verso il basso */
+    }
+}
+
+@media(max-width: 960px) {
+    .menu-item {
+        display: none;
+    }
+    .mobile-only  {
+        display: block;
+    }
+    #section2 .box-testo3 {
+        width: 50%;  /* Aumenta la larghezza per schermi più piccoli */
+        right: 0;  /* Resetta la posizione rispetto a destra */
+        top: 400px;  /* Regola la posizione verticale */
+        padding: 15px;  /* Riduce il padding */
+    }
+
+    /* Box-testo4 */
+    #section2 .box-testo4 {
+        width: 80%;  /* Aumenta la larghezza */
+        left: 0;  /* Resetta la posizione rispetto a sinistra */
+        top: 500px;  /* Regola la posizione verticale */
+        padding: 15px;  /* Riduce il padding */
+    }
+    }
+
+@media(max-width: 600px) {
+    .section-inner {
+        bottom: 75px;
+        left: 20px;
+    }
+    .section-inner h1 {
+        font-size: 40px;
+    }
+  
+ footer ul li:first-child {
+
+    position:absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+
+ footer ul li {
+    margin-right: 15px;
+}
+
+#section2 .box-testo3 {
+    width: 90%;  /* Aumenta ulteriormente la larghezza */
+    right: 0;  /* Resetta la posizione */
+    top: 350px;  /* Regola la posizione verticale */
+    padding: 10px;  /* Riduce il padding */
+}
+
+/* Box-testo4 */
+#section2 .box-testo4 {
+    width: 90%;  /* La larghezza occupa tutta la sezione */
+    left: 0;  /* Resetta la posizione */
+    top: 400px;  /* Regola la posizione verticale */
+    padding: 10px;  /* Riduce il padding */
+}
+
+}
+
+
+
+.special {
+    color: #00c4fe;
+    text-transform: none;
+    border-bottom: none;
+}
+
+.special2 {
+    color: #fe0004;
+}
+
+
+.mobile-only  {
+    display: none;
+}
+
+
+/* Stile per l'intestazione */
+header {
+    color: white;
+
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+ 
+ /* Stile per le sezioni principali */
+ main {
+     margin: 20px 0;
+ }
+ 
+ section {
+     margin-bottom: 20px;
+     padding: 20px;
+     background: white;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ 
+ section h2 {
+     color: #4CAF50;
+     margin-bottom: 10px;
+ }
+ 
+ section p {
+     margin: 10px 0;
+ }
+ 
+ /* Stile per il piè di pagina */
+ footer {
+     text-align: center;
+     margin-top: 0px;
+     padding: 10px 0;
+     background: #00c4fe;
+     color: white;
+     font-size: 0.9rem;
+     font-family: "PT Sans", sans-serif;
+ }
+ 
+
+
+/* Animazione di apparizione */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+ /* Finestra di login */
+ .login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo opaco */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* Animazione di ingresso */
+    z-index: 10;
+}
+.Smooth #scroller {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    will-change: transform;
+}
+
+/* Pulsante di chiusura */
+.close-login {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-login:hover {
+    color: #f00;
+}
+
+/* Stile per il campo di input */
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    z-index: 10;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    border-color: #007bff;
+}
+
+/* Pulsante di login */
+.login-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Testo di registrazione */
+.register-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.register-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Stile per la finestra modale */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Nascosto di default */
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Rendi visibile la finestra quando ha la classe "active" */
+.overlay.active {
+    display: flex;
+}
+
+/* Modifica lo stile della finestra di login e registrazione */
+.login-container, .register-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    z-index: 10;
+}
+
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Finestra di registrazione */
+.register-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Sfondo opaco */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* Animazione di ingresso */
+    z-index: 10;
+}
+
+/* Modifica il link per tornare al login */
+.back-to-login {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.back-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.register-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 15px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cookie-banner .cookie-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.cookie-options {
+    display: flex; 
+    justify-content: space-between; /* Spazio equidistante tra le opzioni */
+    align-items: center; /* Centra verticalmente */
+    gap: 5px; /* Spazio tra le opzioni */
+}
+
+.cookie-options label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-right: 120px;
+}
+
+.cookie-options input[type="checkbox"] {
+    margin-right:   10px; /* Distanza tra la casella di spunta e il testo */
+}
+
+.cookie-options input {
+    margin-right: 10px;
+}
+
+.cookie-buttons {
+    margin-top: 15px;
+}
+
+/* Contenitore del banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenitore delle opzioni di cookie */
+.cookie-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px; /* Distanza tra le opzioni e i pulsanti */
+}
+
+/* Centra i pulsanti */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Pulsanti generali */
+.cookie-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+/* Pulsante Accetta */
+.accept-all {
+    background: #ff9800;
+    color: #fff;
+}
+
+.accept-all:hover {
+    background: #e68900; /* Un po' più scuro per l'effetto hover */
+}
+
+/* Pulsante Rifiuta */
+.reject-all {
+    background: #dc3545;
+    color: #fff;
+}
+
+.reject-all:hover {
+    background: #c82333; /* Un po' più scuro per l'effetto hover */
+}
+
+/* Link Cookie */
+.cookie-link {
+    color: #ff9800;
+    text-decoration: underline;
+}
+
+.menu-link {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: inherit; /* Inherit il colore dal genitore (ad esempio la lista o il menu-item) */
+}
+
+.menu-link:hover {
+    text-decoration: none; /* Rimuove la sottolineatura anche al passaggio del mouse */
+    color: inherit; /* Mantiene il colore originale al passaggio del mouse */
+}
+
+#section4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Imposta l'altezza della sezione a tutta la finestra */
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quiz-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: white;
+  }
+  
+  .quiz-subtitle {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  .quiz-box {
+    background-color: transparent; /* Colore di sfondo del box */
+    border-radius: 8px;
+    padding: 40px;
+  }
+  
+  .quiz-button {
+    color: #00c4fe;
+    text-decoration: overline;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    border: 4px solid white;
+  }
+  
+  .quiz-button:hover {
+    background-color: white;
+  }
+  
+  
+  .section-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+ #section3 .box-testo6{ position: absolute; right: 235px; top: 1670px; font-weight: 700; font-family: "PT Sans", sans-serif;  animation: fadeInUp 0.5s ease-in-out; color: #fff; }
+body {
+    margin: 0px; /*elimino bordo*/
+ }
+ #section3 .box-testo7{ position: absolute; top: 1780px; right: 149px; font-weight: 200; font-family: "PT Sans", sans-serif;  height: 20px; animation: fadeInUp 0.5s ease-in-out 0.2s; animation-fill-mode: both; color: #fff;}
+
+ #section3 .grande {
+    font-size: 50px;
+    text-align: left;
+    color: #150734;
+    z-index: 0px;
+  }
+
+  #section3 .piccolo {
+    font-size: 20px;
+    text-align: left;
+    color: #150734;
+    z-index: 0px;
+  }
+
+
+  
+ #section3 .quiz-container1 {
+    display: flex;
+    top: 1950px;
+    position: absolute;
+right: 556px;
+    z-index: 8px;
+  }
+  
+
+  
+  #section3 .quiz-button1 {
+    color: #fff;
+    text-decoration: overline;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #150734;
+    transition: background-color 0.3s ease;
+    z-index: 8px;
+  }
+  
+  #section3 .quiz-button1:hover {
+    background-color: #E0E5EB;
+    color: #150734;
+  }
+
+  #section3 .box-testo8{ position: absolute; left: 255px; top: 2100px; font-weight: 700; font-family: "PT Sans", sans-serif; height: 450px; animation: fadeInUp 0.5s ease-in-out; color: #fff; }
+body {
+    margin: 0px; /*elimino bordo*/
+ }
+ #section3 .box-testo9{ position: absolute; top: 2205px; left: 260px; font-weight: 200; font-family: "PT Sans", sans-serif;  height: 20px; animation: fadeInUp 0.5s ease-in-out 0.2s; animation-fill-mode: both; color: #fff;}
+
+ #section3 .grande6 {
+    font-size: 50px;
+    text-align: left;
+    color: #150734;
+    z-index: 0px;
+  }
+
+  #section3 .piccolo7 {
+    font-size: 20px;
+    text-align: left;
+    color: #150734;
+    z-index: 0px;
+  }
+
+
+  
+ #section3 .quiz-container2 {
+    display: flex;
+    top: 2393px;
+    position: absolute;
+left: 260px;
+    z-index: 8px;
+  }
+  
+
+  
+  #section3 .quiz-button2 {
+    color: #fff;
+    text-decoration: overline;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #150734;
+    transition: background-color 0.3s ease;
+    z-index: 8px;
+  }
+  
+  #section3 .quiz-button2:hover {
+    background-color: #E0E5EB;
+    color: #150734;
+  }
+
+
+  /* Contenitore principale per la finestra modale */
+  #modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscuramento dello sfondo */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Sfocatura del contenuto dietro */
+    -webkit-backdrop-filter: blur(5px); /* Supporto per Safari */
+    overflow: hidden;  /* Blocca lo scroll dello sfondo */
+  }
+  
+  /* Sezione della modale (contenitore della finestra) */
+  #modal-section {
+    background-color: white;
+    padding: 30px;
+    width: 850px;  /* Aumentato la larghezza della modale */
+    max-width: 90%;  /* La larghezza massima sarà il 90% dello schermo */
+    border-radius: 8px;
+    position: relative;
+    max-height: 80%;  /* Limita l'altezza della modale (80% della finestra) */
+    overflow: auto;  /* Permette lo scroll se il contenuto è troppo lungo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Aggiungi un'ombra leggera alla modale */
+    font-family: "PT Sans", sans-serif;
+    color: #150734;
+  }
+  
+  /* Titolo della modale */
+  #modal-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: "PT Sans", sans-serif;
+    color: #150734;
+  }
+  
+  /* Contenuto della modale */
+  #modal-content {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-family: "PT Sans", sans-serif;
+    color: #150734;
+  }
+  
+  /* Pulsante di chiusura della modale */
+  #modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #150734;
+  }
+  
+  #modal-close-button:hover {
+    color: red;
+  }
+  
